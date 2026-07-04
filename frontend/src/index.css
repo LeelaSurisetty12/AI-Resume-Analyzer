@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/*
+  Design tokens for the marketing site.
+
+  Palette rationale: a near-black editorial base (not pure #000, which
+  looks flat on screen) with ONE signature gradient - cyan-to-violet -
+  used sparingly for the scan-line motif and primary CTA. Everything
+  else stays monochrome so the accent actually reads as intentional
+  instead of decorative noise.
+*/
+@theme {
+  --color-base: #0a0a0c;
+  --color-surface: #131316;
+  --color-raised: #1b1b1f;
+  --color-line: #26262b;
+  --color-ink: #f2f2f0;
+  --color-ink-muted: #98999e;
+  --color-cyan: #3fe0c5;
+  --color-violet: #7c6cf6;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "IBM Plex Sans", "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  @apply bg-base text-ink antialiased font-body;
+}
+
+/* Visible keyboard focus ring everywhere - accessibility floor, not optional */
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+/* ---- Signature motif: the resume "scan line" ---- */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(280px);
+    opacity: 0;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scan-sweep {
+  animation: scan-sweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Respect users who have asked for reduced motion at the OS level */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan-sweep,
+  .animate-reveal-up {
+    animation: none !important;
+  }
+}
