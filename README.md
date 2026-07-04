@@ -61,49 +61,49 @@ An intelligent resume analysis platform that evaluates resumes using Google Gemi
 
 ## Landing Page
 
-<img src="screenshots/landing.png" width="100%">
+<img src="ScreenShots/landingpage.png" width="100%">
 
 ---
 
 ## Login
 
-<img src="screenshots/login.png" width="70%">
+<img src="ScreenShots/login.png" width="70%">
 
 ---
 
 ## Dashboard
 
-<img src="screenshots/dashboard.png" width="100%">
+<img src="ScreenShots/dashboard.png" width="100%">
 
 ---
 
 ## Resume Upload
 
-<img src="screenshots/upload.png" width="100%">
+<img src="ScreenShots/uploadresume.png" width="100%">
 
 ---
 
 ## ATS Analysis
 
-<img src="screenshots/analysis.png" width="100%">
+<img src="ScreenShots/Analysisresult.png" width="100%">
 
 ---
 
 ## Resume Chat
 
-<img src="screenshots/chat.png" width="100%">
+<img src="ScreenShots/resumechat.png" width="100%">
 
 ---
 
 ## Interview Preparation
 
-<img src="screenshots/interview.png" width="100%">
+<img src="ScreenShots/interviewprep.png" width="100%">
 
 ---
 
 ## AI Cover Letter
 
-<img src="screenshots/coverletter.png" width="100%">
+<img src="ScreenShots/Coverletter.png" width="100%">
 
 ---
 
@@ -283,6 +283,6 @@ It helps others discover the project and motivates future improvements.
 
 <div align="center">
 
-### Built with ❤️ using React, FastAPI, Firebase & Google Gemini AI
+### Built using React, FastAPI, Firebase & Google Gemini AI
 
 </div>
